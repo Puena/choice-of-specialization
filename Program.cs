@@ -24,6 +24,12 @@ namespace SpecialisationChoice
             }
         }
 
+        /// <summary>
+        /// Filter string array
+        /// </summary>
+        /// <param name="arr">Input array</param>
+        /// <param name="p">Predicate</param>
+        /// <returns>Return new array of string satisfying condition</returns>
         static string[] FilterArrayOfString(string[] arr, Predicate<string> p)
         {
             int[] matchPredicate = new int[arr.Length];
@@ -47,6 +53,13 @@ namespace SpecialisationChoice
             return result;
         }
 
+        /// <summary>
+        /// Compose array item to string
+        /// </summary>
+        /// <typeparam name="T">Array type</typeparam>
+        /// <param name="arr">Input array</param>
+        /// <param name="separator">Separator for array elements</param>
+        /// <returns>Return string of array elements connected by separator</returns>
         static string ArrayToString<T>(T[] arr, string separator)
         {
             var resultString = new StringBuilder();
